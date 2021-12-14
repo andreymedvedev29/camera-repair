@@ -1,0 +1,41 @@
+.orders {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin: 0 0 50px 0;
+    }
+
+    &__subtitle {
+        width: 549px;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 64px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin: 0 0 106px 0;
+    }
+
+    &__paragraph {
+        width: 380px;
+        margin: 336px 0 148px auto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    }
+}

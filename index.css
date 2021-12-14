@@ -91,6 +91,7 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 50px;
+  box-sizing: border-box;
 }
 .camera__bottom {
   display: flex;
@@ -182,9 +183,11 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 50px;
+  box-sizing: border-box;
 }
 .composition__bottom {
   display: flex;
+  margin: 0;
 }
 .composition__container {
   display: flex;
@@ -255,6 +258,7 @@
   padding: 50px;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 .title-block__img {
   width: 642px;
@@ -277,6 +281,44 @@
   font-style: normal;
   font-weight: 400;
   line-height: 110px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.orders {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.orders__title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0 0 50px 0;
+}
+.orders__subtitle {
+  width: 549px;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0 0 106px 0;
+}
+.orders__paragraph {
+  width: 380px;
+  margin: 336px 0 148px auto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
 }/*# sourceMappingURL=index.css.map */

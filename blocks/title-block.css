@@ -4,6 +4,7 @@
   padding: 50px;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 .title-block__img {
   width: 642px;

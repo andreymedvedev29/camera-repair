@@ -3,9 +3,11 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 50px;
+  box-sizing: border-box;
 }
 .composition__bottom {
   display: flex;
+  margin: 0;
 }
 .composition__container {
   display: flex;
