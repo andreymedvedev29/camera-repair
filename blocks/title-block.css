@@ -1,0 +1,31 @@
+.title-block {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.title-block__img {
+  width: 642px;
+  height: 555px;
+}
+.title-block__paragraph {
+  width: 469px;
+  margin: 0 0 170px 0;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.title-block__title {
+  width: 624px;
+  margin: 0 0 60px 0;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110px;
+  letter-spacing: 0em;
+  text-align: left;
+}/*# sourceMappingURL=title-block.css.map */

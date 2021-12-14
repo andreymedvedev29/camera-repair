@@ -1,0 +1,102 @@
+.camera {
+    background-color: black;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px;
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__bottom-feedback {
+        color: white;
+        font-size: 43px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 43px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin: 0 0 60px 0;
+
+        &:first-child {
+            margin: 0;
+        }
+    }
+
+    &__bottom-job {
+        color: white;
+        margin: 0;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    &__bottom-left {
+        width: 529px;
+        margin-right: 172px;
+    }
+
+    &__bottom-name {
+        color: white;
+        margin: 60px 0 10px 0;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    &__bottom-right {
+        width: 497px;
+        margin-right: 150px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 180px;
+    }
+
+    &__img {
+        width: 642px;
+        height: 832px;
+    }
+
+    &__paragraph {
+        color: white;
+        margin: 0;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    &__subtitle {
+        color: white;
+        margin: 0 0 359px 0;
+        font-size: 122px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 122px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    &__title {
+        color: white;
+        margin: 0 0 50px 0;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+}
