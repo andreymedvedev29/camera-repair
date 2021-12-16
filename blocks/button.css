@@ -15,4 +15,11 @@
 }
 .button:hover {
   font-weight: 600;
+}
+@media screen and (max-width: 690px) {
+  .button {
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=button.css.map */

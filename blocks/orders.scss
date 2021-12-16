@@ -3,8 +3,53 @@
     margin: 0 auto;
     padding: 50px;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, fit-content);
+    gap: 50px 312px;
+    grid-template-areas:
+    "title        ."
+    "subtitle     ."
+    "img      cont";
+
+    @media screen and (max-width: 1360px) {
+        & {
+            max-width: 768px;
+            padding: 40px;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+            grid-template-areas:
+            "title "
+            "subtitle"
+            "img"
+            "cont"   
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        & {
+            max-width: 768px;
+            padding: 40px;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+            grid-template-areas:
+            "title "
+            "subtitle"
+            "img"
+            "cont"   
+        }
+    }
+    @media screen and (max-width: 690px) {
+        & {
+            max-width: 320px;
+            padding: 40px 20px 20px 20px;
+            gap: 30px;   
+        }
+    }
+
+    &__cont {
+        align-self: end;
+        grid-area: cont;
+    }
 
     &__title {
         font-size: 18px;
@@ -13,29 +58,76 @@
         line-height: 28px;
         letter-spacing: 0em;
         text-align: left;
-        margin: 0 0 50px 0;
+        margin: 0;
+        grid-area: title;
+
+        @media screen and (max-width: 690px) {
+            & {                
+                font-size: 14px;
+                line-height: 20px;
+                border-top: 1px solid black;
+                padding-top: 20px;           
+            }
+        }
     }
 
     &__subtitle {
-        width: 549px;
+        max-width: 648px;
         font-size: 64px;
         font-style: normal;
         font-weight: 400;
         line-height: 64px;
         letter-spacing: 0em;
         text-align: left;
-        margin: 0 0 106px 0;
+        margin: 0 0 56px 0;
+        grid-area: subtitle;
+
+        @media screen and (max-width: 1023px) {
+            & {
+                margin: 0 0 20px 0;
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            & {                
+                font-size: 30px;
+                line-height: 38px;
+                margin-bottom: 30px;                
+            }
+        }
+    
     }
 
     &__paragraph {
-        width: 380px;
-        margin: 336px 0 148px auto;
+        max-width: 380px;
+        margin: 0 0 148px 0;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: 28px;
         letter-spacing: 0em;
         text-align: left;
+        grid-area: paragraph;
 
+        @media screen and (max-width: 1023px) {
+            & {
+                margin: 20px 0 60px 0;
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            & {                
+                font-size: 14px;
+                line-height: 18px;
+                margin: 30px 0 30px 0;   
+            }
+        }
+
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        grid-area: img;
     }
 }

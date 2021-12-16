@@ -2,40 +2,50 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 50px;
-    display: flex;
-    justify-content: space-between;
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, fit-content);
+    gap: 60px 76px;
+    grid-template-areas:
+    "title     img"
+    "paragraph img"
+    "button    img";
 
-    @media screen and  (max-width: 767px){
+    @media screen and (max-width: 1023px) {
         & {
-            display: grid;
+            max-width: 768px;
+            padding: 40px;
             grid-template-columns: repeat(1, 1fr);
             gap: 60px;
             grid-template-areas:
+            "title "
             "img"
-            "title"
             "paragraph"
-            "button"
+            "button"    
         }
     }
+    @media screen and (max-width: 690px) {
+        & {
+            max-width: 320px;
+            padding: 20px;
+            gap: 30px;   
+        }
+    }
+    
+    
 
     &__img {
-        width: 642px;
-        height: 555px;
+        object-fit: cover;
+        width: 100%;
         grid-area: img;
 
-        @media screen and  (max-width: 767px){
-            & {
-                width: 688px;
-                height: 594px;
-                
-            }
-        }
+     
     }
 
     &__paragraph {
         max-width: 469px;
-        margin: 0 0 170px 0;
+        margin: 0 0 110px 0;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -43,11 +53,25 @@
         letter-spacing: 0em;
         text-align: left;
         grid-area: paragraph;
+
+        @media screen and (max-width: 1023px) {
+            & {
+                margin: 0;   
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            & {
+                font-size: 14px;
+                line-height: 18px;
+                margin-top: 30px;
+            }
+        }
     }
 
     &__title {
         max-width: 624px;
-        margin: 0 0 60px 0;
+        margin: 0;
         font-size: 100px;
         font-style: normal;
         font-weight: 400;
@@ -55,7 +79,13 @@
         letter-spacing: 0em;
         text-align: left;
         grid-area: title;
-    }
 
-    
+        @media screen and (max-width: 690px) {
+            & {
+                font-size: 47px;    
+                line-height: 56px;
+                margin-bottom: 30px;    
+            }
+        }
+    }    
 }

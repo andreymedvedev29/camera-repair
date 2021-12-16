@@ -7,6 +7,11 @@
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 690px) {
+  .header {
+    max-width: 320px;
+  }
+}
 .header__logo {
   color: white;
   width: 40px;

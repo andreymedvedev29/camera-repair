@@ -5,9 +5,50 @@
   padding: 50px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 1023px) {
+  .camera {
+    max-width: 768px;
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .camera {
+    max-width: 320px;
+    padding: 40px 20px 20px 20px;
+    gap: 30px;
+  }
+}
+.camera__container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, -webkit-fit-content);
+  grid-template-rows: repeat(4, fit-content);
+  gap: 50px 76px;
+  grid-template-areas: "title     img" "subtitle  img" "paragraph img" "button    img";
+}
+@media screen and (max-width: 1023px) {
+  .camera__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    grid-template-areas: "title " "subtitle" "img" "paragraph" "button";
+  }
+}
 .camera__bottom {
+  margin: 50px 0 0 0;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1023px) {
+  .camera__bottom {
+    display: block;
+    margin: 140px 0 0 0;
+  }
+}
+@media screen and (max-width: 690px) {
+  .camera__bottom {
+    margin: 30px 0 0 0;
+  }
 }
 .camera__bottom-feedback {
   color: white;
@@ -22,6 +63,18 @@
 .camera__bottom-feedback:first-child {
   margin: 0;
 }
+@media screen and (max-width: 1023px) {
+  .camera__bottom-feedback {
+    max-width: 526px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .camera__bottom-feedback {
+    font-size: 24px;
+    line-height: 26px;
+    margin: 0;
+  }
+}
 .camera__bottom-job {
   color: white;
   margin: 0;
@@ -32,9 +85,30 @@
   letter-spacing: 0em;
   text-align: left;
 }
+@media screen and (max-width: 690px) {
+  .camera__bottom-job {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
 .camera__bottom-left {
   width: 529px;
   margin-right: 172px;
+}
+@media screen and (max-width: 1023px) {
+  .camera__bottom-left {
+    width: 100%;
+    margin: 0;
+  }
+  .camera__bottom-left:first-of-type {
+    border-bottom: 1px solid white;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (max-width: 690px) {
+  .camera__bottom-left:first-of-type {
+    padding-bottom: 30px;
+  }
 }
 .camera__bottom-name {
   color: white;
@@ -46,18 +120,33 @@
   letter-spacing: 0em;
   text-align: left;
 }
+@media screen and (max-width: 690px) {
+  .camera__bottom-name {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 30px 0 6px 0;
+  }
+}
 .camera__bottom-right {
   width: 497px;
   margin-right: 150px;
 }
-.camera__container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 180px;
+@media screen and (max-width: 1023px) {
+  .camera__bottom-right {
+    width: 100%;
+    margin: 60px 0 0 0;
+  }
+}
+@media screen and (max-width: 690px) {
+  .camera__bottom-right {
+    margin: 30px 0 0 0;
+  }
 }
 .camera__img {
-  width: 642px;
-  height: 832px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  grid-area: img;
 }
 .camera__paragraph {
   color: white;
@@ -68,24 +157,59 @@
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
+  grid-area: paragraph;
+}
+@media screen and (max-width: 1023px) {
+  .camera__paragraph {
+    margin: 20px 0 0 0;
+  }
+}
+@media screen and (max-width: 690px) {
+  .camera__paragraph {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 30px 0 0 0;
+  }
 }
 .camera__subtitle {
   color: white;
-  margin: 0 0 359px 0;
+  margin: 0 0 309px 0;
   font-size: 122px;
   font-style: normal;
   font-weight: 400;
   line-height: 122px;
   letter-spacing: 0em;
   text-align: left;
+  grid-area: subtitle;
+}
+@media screen and (max-width: 1023px) {
+  .camera__subtitle {
+    margin: 0 0 20px 0;
+  }
+}
+@media screen and (max-width: 690px) {
+  .camera__subtitle {
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 30px;
+  }
 }
 .camera__title {
   color: white;
-  margin: 0 0 50px 0;
+  margin: 0;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
+  grid-area: title;
+}
+@media screen and (max-width: 690px) {
+  .camera__title {
+    font-size: 14px;
+    line-height: 20px;
+    border-top: 1px solid white;
+    padding-top: 20px;
+  }
 }/*# sourceMappingURL=camera.css.map */

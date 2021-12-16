@@ -5,23 +5,67 @@
     padding: 50px;
     box-sizing: border-box;
 
-    &__bottom {
-        display: flex;
-        margin: 0;
+    @media screen and (max-width: 1023px) {
+        & {
+            max-width: 768px;
+            padding: 40px;   
+        }
+    }
+
+    @media screen and (max-width: 690px) {
+        & {
+            max-width: 320px;
+            padding: 40px 20px 20px 20px;
+            gap: 30px;   
+        }
     }
 
     &__container {
-        display: flex;
-        justify-content: space-between;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, fit-content);
+        gap: 50px 76px;
+        grid-template-areas:
+        "title     img"
+        "subtitle  img"
+        "paragraph img"
+        "button    img";
+
+        @media screen and (max-width: 1023px) {
+            & {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 40px;
+                grid-template-areas:
+                "title "
+                "subtitle"
+                "img"
+                "paragraph"
+                "button"    
+            }
+        }
     }
 
+    &__bottom {
+        display: flex;
+        margin: 0;
+
+        @media screen and (max-width: 1023px) {
+            & {
+                display: inline-block;
+            }
+        }
+    }
+  
+
     &__img {
-        width: 642px;
-        height: 685px;
+        object-fit: cover;
+        width: 100%;
+        grid-area: img;
     }
 
     &__paragraph {
-        width: 400px;
+        max-width: 400px;
         margin: 0 0 20px 0;
         font-size: 18px;
         font-style: normal;
@@ -29,14 +73,34 @@
         line-height: 28px;
         letter-spacing: 0em;
         text-align: left;
+        grid-area: paragraph;
 
         &:nth-last-of-type(1) {
-            margin: 0 0 198px 0;
+            margin: 0 0 148px 0;
+        }
+        @media screen and (max-width: 1023px) {
+            & {
+                margin: 20px 0 20px 0;
+            }
+            &:nth-last-of-type(1) {
+                margin: 0 0 20px 0;
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            & {                
+                font-size: 14px;
+                line-height: 18px;
+                margin: 30px 0 36px 0;                
+            }
+            &:nth-last-of-type(1) {
+                margin: 0;
+            }
         }
     }
 
     &__paragraph-bottom {
-        width: 291px;
+        max-width: 291px;    
         margin: 100px 56px 0 0;
         font-size: 18px;
         font-style: normal;
@@ -48,6 +112,35 @@
         &:nth-last-of-type(1) {
             margin: 100px 0 0 0;
         }
+
+        @media screen and (max-width: 1023px) {
+            & {
+                max-width: 688px;
+                padding: 30px 0;
+                border-bottom: 1px solid black;
+                margin: 0;
+            }
+            &:first-of-type {
+                margin: 0;
+                padding-top: 60px;
+            }
+            &:nth-last-of-type(1) {
+                margin: 0;
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            & {                
+                font-size: 14px;
+                line-height: 18px; 
+                padding: 14px 0;
+            }
+            &:first-of-type {
+                padding-top: 80px;
+            }
+        }
     }
 
     &__span-accent {
@@ -57,27 +150,61 @@
         line-height: 28px;
         letter-spacing: 0em;
         text-align: left;
+
+        @media screen and (max-width: 690px) {
+            & {                
+                font-size: 14px;
+                line-height: 18px;               
+            }
+        }
     }
 
+  
+
     &__subtitle {
-        width: 403px;
-        height: 128px;
-        margin: 0 0 100px 0;
+        max-width: 403px;
+        /*min-height: 128px;*/
+        margin: 0 0 50px 0;
         font-size: 64px;
         font-style: normal;
         font-weight: 400;
         line-height: 64px;
         letter-spacing: 0em;
         text-align: left;
+        grid-area: subtitle;
+
+        @media screen and (max-width: 1023px) {
+            & {
+                margin: 0 0 20px 0;
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            & {                
+                font-size: 30px;
+                line-height: 38px;
+                margin-bottom: 30px;                
+            }
+        }
     }
 
     &__title {
-        margin: 0 0 50px 0;
+        margin: 0 0 0 4px;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: 28px;
         letter-spacing: 0em;
         text-align: left;
+        grid-area: title;
+
+        @media screen and (max-width: 690px) {
+            & {                
+                font-size: 14px;
+                line-height: 20px;
+                border-top: 1px solid black;
+                padding-top: 20px;           
+            }
+        }
     }
 }
