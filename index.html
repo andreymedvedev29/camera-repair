@@ -11,13 +11,13 @@
     <header class="header">
         <img src="./images/logo.svg" alt="logo" class="header__logo">
             <nav class="header__navigation">
-                <a class="header__navigation-link" href="#">
+                <a data-goto=".composition" class="header__navigation-link" href="#">
                    <p class="header__link-text">Композиция</p>
                 </a>
-                <a class="header__navigation-link" href="#">
+                <a data-goto=".camera" class="header__navigation-link" href="#">
                    <p class="header__link-text">Камера</p>
                 </a>
-                <a class="header__navigation-link" href="#">
+                <a data-goto=".orders" class="header__navigation-link" href="#">
                    <p class="header__link-text">Поиск заказов</p>
                 </a>
             </nav>
@@ -87,13 +87,22 @@
               <button type="button" class="button">Записаться!</button>
             </div>            
           </section>
-          
-
     </main>
-
-    <footer class="footer">
-
-    </footer>
     
+    <footer class="footer">
+      <div class="footer__container">
+        <img class="footer__logo" src="./images/Vector.svg" alt="Лого">
+        <p class="footer__paragraph">Записаться!</p>
+      </div>
+      <p class="footer__paragraph-bottom">Сейчас!</p>
+      <form name="form" class="form">
+        <fieldset class="form__mail">
+            <input type="email" class="form__item"  name="mail" placeholder="Ваша почта" value="Ваша почта" required>
+            <button type="submit" class="form__button">Записаться!</button>
+        </fieldset>
+      </form> 
+      <p class="footer__autor">2021 Photo-lessons.</p>
+    </footer>
+    <script src="./index.js"></script>
 </body>
 </html>

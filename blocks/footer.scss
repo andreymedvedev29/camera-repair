@@ -1,0 +1,44 @@
+.footer {
+    background-color: #DF2626;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 50px;
+    box-sizing: border-box;
+
+    &__container {
+        display: flex;
+    }
+
+    &__paragraph {
+        color: white;
+        font-size: 120px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin: 0 0 0 50px;
+    }
+
+    &__paragraph-bottom {
+        color: white;
+        font-size: 120px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin: 0 0 120px 179px;
+    }
+
+    &__autor {
+        color: white;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin: 0;
+    }
+}

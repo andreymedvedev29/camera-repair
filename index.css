@@ -81,6 +81,7 @@
   letter-spacing: 0em;
   text-align: center;
   cursor: pointer;
+  grid-area: button;
 }
 .button:hover {
   font-weight: 600;
@@ -260,12 +261,27 @@
   justify-content: space-between;
   box-sizing: border-box;
 }
+@media screen and (max-width: 767px) {
+  .title-block {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 60px;
+    grid-template-areas: "img" "title" "paragraph" "button";
+  }
+}
 .title-block__img {
   width: 642px;
   height: 555px;
+  grid-area: img;
+}
+@media screen and (max-width: 767px) {
+  .title-block__img {
+    width: 688px;
+    height: 594px;
+  }
 }
 .title-block__paragraph {
-  width: 469px;
+  max-width: 469px;
   margin: 0 0 170px 0;
   font-size: 20px;
   font-style: normal;
@@ -273,9 +289,10 @@
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
+  grid-area: paragraph;
 }
 .title-block__title {
-  width: 624px;
+  max-width: 624px;
   margin: 0 0 60px 0;
   font-size: 100px;
   font-style: normal;
@@ -283,6 +300,7 @@
   line-height: 110px;
   letter-spacing: 0em;
   text-align: left;
+  grid-area: title;
 }
 
 .orders {
@@ -321,4 +339,93 @@
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+.footer {
+  background-color: #DF2626;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.footer__container {
+  display: flex;
+}
+.footer__paragraph {
+  color: white;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0 0 0 50px;
+}
+.footer__paragraph-bottom {
+  color: white;
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0 0 120px 179px;
+}
+.footer__autor {
+  color: white;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 0;
+}
+
+.form {
+  margin: 0;
+  padding: 0;
+}
+.form__mail {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+.form__item {
+  border: 0;
+  width: 348px;
+  height: 50px;
+  margin: 0 0 86px 184px;
+  padding-left: 20px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.375px;
+  text-align: left;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 8px 0px 0px 8px;
+  outline: none;
+}
+.form__button {
+  background-color: white;
+  width: 205px;
+  height: 50px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.375px;
+  text-align: center;
+  margin: 3px 0 0 -1px;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 0px 8px 8px 0px;
+}
+.form__button:hover {
+  font-weight: 600;
 }/*# sourceMappingURL=index.css.map */

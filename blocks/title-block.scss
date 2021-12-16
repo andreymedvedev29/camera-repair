@@ -6,13 +6,35 @@
     justify-content: space-between;
     box-sizing: border-box;
 
+    @media screen and  (max-width: 767px){
+        & {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 60px;
+            grid-template-areas:
+            "img"
+            "title"
+            "paragraph"
+            "button"
+        }
+    }
+
     &__img {
         width: 642px;
         height: 555px;
+        grid-area: img;
+
+        @media screen and  (max-width: 767px){
+            & {
+                width: 688px;
+                height: 594px;
+                
+            }
+        }
     }
 
     &__paragraph {
-        width: 469px;
+        max-width: 469px;
         margin: 0 0 170px 0;
         font-size: 20px;
         font-style: normal;
@@ -20,10 +42,11 @@
         line-height: 28px;
         letter-spacing: 0em;
         text-align: left;
+        grid-area: paragraph;
     }
 
     &__title {
-        width: 624px;
+        max-width: 624px;
         margin: 0 0 60px 0;
         font-size: 100px;
         font-style: normal;
@@ -31,5 +54,8 @@
         line-height: 110px;
         letter-spacing: 0em;
         text-align: left;
+        grid-area: title;
     }
+
+    
 }
