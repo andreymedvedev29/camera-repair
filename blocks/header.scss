@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     @media screen and (max-width: 690px) {
         & {
@@ -13,12 +14,30 @@
         }
     }
     
-
     &__logo {
         color: white;
         width: 40px;
         height: 40px;
         margin-left: 50px;
+
+        @media screen and (max-width: 768px) {
+            & {
+                width: 36px;
+                height: 36px;
+                margin-left: 40px;
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            & {
+                width: 30px;
+                height: 30px;
+                /*margin: 20px 0 0 20px; */
+                position: absolute;
+                top: 27px;
+                left: -20px;;
+            }
+        }
         
         @keyframes rotation {
             from {
@@ -28,15 +47,23 @@
                 transform: rotate(360deg);
             }
         }
+
+        &:hover {
+            animation: rotation 20s linear;
+            cursor: pointer;
+        }
     }
-    &__logo:hover {
-        animation: rotation 20s linear;
-        cursor: pointer;
-    }
+    
 
     &__navigation {
         display: flex;
         justify-content: space-between;
+
+        @media screen and (max-width: 768px) {
+            & {
+               display: none;  
+            }
+        }
     }
 
     &__navigation-link {
@@ -61,4 +88,29 @@
         font-weight: 700;
     }
 
+    &__burg-menu {
+        background-color: rgb(255, 0, 0, 0);
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin: 0 40px 0 0;
+        display: none;
+
+        @media screen and (max-width: 768px) {
+            & {
+               display: block;    
+            }
+        }
+
+        @media screen and (max-width: 690px) {
+            & {
+                width: 32px;
+                height: 20px;
+                /*margin-right: 20px; */
+                position: absolute;
+                top: 32px;
+                left: 258px;;
+            }
+        }
+    }
 }

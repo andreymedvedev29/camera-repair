@@ -1,22 +1,18 @@
+const popupMenu = document.querySelector('.popup-menu');
+
+function openPopup(popupElement) {             
+    popupElement.classList.add('popup-menu_opened');
+  };
+  function closePopup(popupElement) {            
+    popupElement.classList.remove('popup-menu_opened');
+  };
 
 
-const menuLinks = document.querySelectorAll('.header__navigation-link');
-if (menuLinks.length > 0) {
-    menuLinks.forEach(menuLink => {
-        menuLink.addEventListener("click", onMenuLinkClick);
-    });
-
-    function onMenuLinkClick(e) {
-        const menuLink = e.target;
-        if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-            const gotoBlock = document.querySelector(menuLink.dataset.goto);
-            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset  - document.querySelector('header').offsetHeight;
-
-            window.scroll({
-                top: gotoBlockValue,
-                behavior: "smooth"
-            });
-            e.preventDefault();
-        }
-    }
-}
+const burgMenu = document.querySelector('.header__burg-menu');//находим кнопку редактирования профиля
+const closeMenu = popupMenu.querySelector('.popup-menu__close-button'); //находим кнопку закрытия попапа профиля
+burgMenu.addEventListener('click', function () {                //на кнопку редактирования профиля вешаем функцию открытия попапа            
+  openPopup(popupMenu);
+});
+closeMenu.addEventListener('click', function () {               //на кнопку закрытия профиля вешаем функцию закрытия попапа
+  closePopup(popupMenu);
+});
