@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, fit-content);
-    gap: 50px 312px;
+    gap: 50px 290px;
     grid-template-areas:
     "title        ."
     "subtitle     ."
@@ -49,6 +49,7 @@
     &__cont {
         align-self: end;
         grid-area: cont;
+        margin: 0;
     }
 
     &__title {
@@ -72,7 +73,6 @@
     }
 
     &__subtitle {
-        max-width: 648px;
         font-size: 64px;
         font-style: normal;
         font-weight: 400;

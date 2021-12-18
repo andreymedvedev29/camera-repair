@@ -626,7 +626,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, -webkit-fit-content);
   grid-template-rows: repeat(3, fit-content);
-  gap: 50px 312px;
+  gap: 50px 290px;
   grid-template-areas: "title        ." "subtitle     ." "img      cont";
 }
 @media screen and (max-width: 1360px) {
@@ -657,6 +657,7 @@
 .orders__cont {
   align-self: end;
   grid-area: cont;
+  margin: 0;
 }
 .orders__title {
   font-size: 18px;
@@ -677,7 +678,6 @@
   }
 }
 .orders__subtitle {
-  max-width: 648px;
   font-size: 64px;
   font-style: normal;
   font-weight: 400;
@@ -929,7 +929,7 @@
     flex-direction: column;
     position: absolute;
     top: 75px;
-    right: 110px;
+    right: 100px;
   }
 }
 .popup-menu__navigation-link {
