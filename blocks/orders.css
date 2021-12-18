@@ -7,7 +7,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, -webkit-fit-content);
   grid-template-rows: repeat(3, fit-content);
-  gap: 50px 290px;
+  gap: 50px 50px;
   grid-template-areas: "title        ." "subtitle     ." "img      cont";
 }
 @media screen and (max-width: 1360px) {
@@ -82,7 +82,7 @@
 }
 .orders__paragraph {
   max-width: 380px;
-  margin: 0 0 148px 0;
+  margin: 0 0 148px 262px;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;

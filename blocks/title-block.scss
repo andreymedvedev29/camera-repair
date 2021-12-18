@@ -25,6 +25,7 @@
             "button"    
         }
     }
+
     @media screen and (max-width: 690px) {
         & {
             max-width: 320px;
@@ -33,14 +34,10 @@
         }
     }
     
-    
-
     &__img {
         object-fit: cover;
         width: 100%;
-        grid-area: img;
-
-     
+        grid-area: img; 
     }
 
     &__paragraph {

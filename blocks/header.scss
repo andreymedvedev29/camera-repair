@@ -54,7 +54,6 @@
         }
     }
     
-
     &__navigation {
         display: flex;
         justify-content: space-between;
@@ -84,6 +83,7 @@
         line-height: 24px;
         letter-spacing: 0em;
     }
+    
     &__link-text:hover {
         font-weight: 700;
     }

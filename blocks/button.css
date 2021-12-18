@@ -16,6 +16,14 @@
 .button:hover {
   font-weight: 600;
 }
+.button_orders {
+  margin-left: 262px;
+}
+@media screen and (max-width: 1023px) {
+  .button_orders {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 690px) {
   .button {
     width: 160px;

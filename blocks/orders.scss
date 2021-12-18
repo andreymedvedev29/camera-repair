@@ -6,11 +6,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, fit-content);
-    gap: 50px 290px;
+    gap: 50px 50px;
     grid-template-areas:
     "title        ."
     "subtitle     ."
-    "img      cont";
+    "img       cont";
 
     @media screen and (max-width: 1360px) {
         & {
@@ -25,6 +25,7 @@
             "cont"   
         }
     }
+
     @media screen and (max-width: 1023px) {
         & {
             max-width: 768px;
@@ -38,6 +39,7 @@
             "cont"   
         }
     }
+
     @media screen and (max-width: 690px) {
         & {
             max-width: 320px;
@@ -94,13 +96,12 @@
                 line-height: 38px;
                 margin-bottom: 30px;                
             }
-        }
-    
+        }    
     }
 
     &__paragraph {
         max-width: 380px;
-        margin: 0 0 148px 0;
+        margin: 0 0 148px 262px;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -122,7 +123,6 @@
                 margin: 30px 0 30px 0;   
             }
         }
-
     }
 
     &__img {
