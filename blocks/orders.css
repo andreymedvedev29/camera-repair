@@ -8,7 +8,7 @@
   grid-template-rows: repeat(3, -webkit-fit-content);
   grid-template-rows: repeat(3, fit-content);
   gap: 50px 50px;
-  grid-template-areas: "title        ." "subtitle     ." "img      cont";
+  grid-template-areas: "title        ." "subtitle     ." "img       cont";
 }
 @media screen and (max-width: 1360px) {
   .orders {

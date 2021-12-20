@@ -1,11 +1,8 @@
 .popup-menu {
     width: 100%;
-    min-height: 84px;
-    margin: auto;
-    background-color: #DF2626;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,19 +10,25 @@
     visibility: hidden;       
     transition: opacity 0.6s, visibility 0s 0.6s;
 
-    @media screen and (max-width: 690px) {
-        & {
-            max-width: 320px; 
-            min-height: 198px;
-            display: block;
-        }
+    &__container {
+        width: 100%;
+        min-height: 84px;
+        font-family: 'Inter', Arial, sans-serif;
+        margin: 0  auto auto auto;
+        background-color: #DF2626;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+ 
+        @media screen and (max-width: 690px) {
+            & {
+                max-width: 320px; 
+                min-height: 198px;
+                display: block;
+            }
+        }    
     }
-
-    &_opened {
-        opacity: 1;
-        visibility: visible;
-        transition: visibility 0s, opacity 0.6s;
-     }
 
     &__navigation {
         display: flex;
@@ -36,7 +39,8 @@
                flex-direction: column;
                position: absolute;
                top: 75px;
-               right: 100px;
+               left: 100px;
+             
             }
         }
     }
@@ -59,7 +63,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
-        letter-spacing: 0em;
+        letter-spacing: 0em;    
     }
 
     &__link-text:hover {
@@ -75,10 +79,16 @@
 
         @media screen and (max-width: 690px) {
             & {
-               position: absolute;
-               top: 20px;
-               right: -25px;
+                position: absolute;
+                top: 17px;
+                right: -23px;
             }
         }
     }
+ 
+    &_opened {
+        opacity: 1;
+        visibility: visible;
+        transition: visibility 0s, opacity 0.6s;
+    }    
 }

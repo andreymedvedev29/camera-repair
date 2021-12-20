@@ -10,6 +10,7 @@
 .header {
   max-width: 1440px;
   min-height: 84px;
+  font-family: "Inter", Arial, sans-serif;
   margin: auto;
   background-color: #DF2626;
   display: flex;
@@ -39,9 +40,8 @@
   .header__logo {
     width: 30px;
     height: 30px;
-    /*margin: 20px 0 0 20px; */
     position: absolute;
-    top: 27px;
+    top: 25px;
     left: -20px;
   }
 }
@@ -91,6 +91,7 @@
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0em;
+  text-align: right;
 }
 .header__link-text:hover {
   font-weight: 700;
@@ -112,10 +113,9 @@
   .header__burg-menu {
     width: 32px;
     height: 20px;
-    /*margin-right: 20px; */
     position: absolute;
-    top: 32px;
-    left: 258px;
+    top: 29px;
+    left: 266px;
   }
 }
 
@@ -635,7 +635,7 @@
   grid-template-rows: repeat(3, -webkit-fit-content);
   grid-template-rows: repeat(3, fit-content);
   gap: 50px 50px;
-  grid-template-areas: "title        ." "subtitle     ." "img      cont";
+  grid-template-areas: "title        ." "subtitle     ." "img       cont";
 }
 @media screen and (max-width: 1360px) {
   .orders {
@@ -903,12 +903,9 @@
 
 .popup-menu {
   width: 100%;
-  min-height: 84px;
-  margin: auto;
-  background-color: #DF2626;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -916,17 +913,23 @@
   visibility: hidden;
   transition: opacity 0.6s, visibility 0s 0.6s;
 }
+.popup-menu__container {
+  width: 100%;
+  min-height: 84px;
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0 auto auto auto;
+  background-color: #DF2626;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
 @media screen and (max-width: 690px) {
-  .popup-menu {
+  .popup-menu__container {
     max-width: 320px;
     min-height: 198px;
     display: block;
   }
-}
-.popup-menu_opened {
-  opacity: 1;
-  visibility: visible;
-  transition: visibility 0s, opacity 0.6s;
 }
 .popup-menu__navigation {
   display: flex;
@@ -937,7 +940,7 @@
     flex-direction: column;
     position: absolute;
     top: 75px;
-    right: 100px;
+    left: 100px;
   }
 }
 .popup-menu__navigation-link {
@@ -971,7 +974,12 @@
 @media screen and (max-width: 690px) {
   .popup-menu__close-button {
     position: absolute;
-    top: 20px;
-    right: -25px;
+    top: 17px;
+    right: -23px;
   }
+}
+.popup-menu_opened {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s, opacity 0.6s;
 }/*# sourceMappingURL=index.css.map */
