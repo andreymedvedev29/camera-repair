@@ -1,0 +1,38 @@
+.logo {
+    color: white;
+    width: 40px;
+    height: 40px;
+    margin-left: 50px;
+
+    @media screen and (max-width: 768px) {
+        & {
+            width: 36px;
+            height: 36px;
+            margin-left: 40px;
+        }
+    }
+
+    @media screen and (max-width: 690px) {
+        & {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 25px;
+            left: -20px;;
+        }
+    }
+        
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    &:hover {
+        animation: rotation 20s linear;
+        cursor: pointer;
+    }
+}
