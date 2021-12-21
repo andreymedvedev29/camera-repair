@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, fit-content);
-    gap: 60px 76px;
+    gap: 60px 56px;
     grid-template-areas:
     "title     img"
     "paragraph img"
@@ -76,6 +76,12 @@
         letter-spacing: 0em;
         text-align: left;
         grid-area: title;
+
+        @media screen and (max-width: 1280px) {
+            & {
+                font-size: 90px;           
+            }
+        }
 
         @media screen and (max-width: 690px) {
             & {
