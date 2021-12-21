@@ -12,7 +12,7 @@
         }
     }
 
-    @media screen and (max-width: 690px) {
+    @media screen and (max-width: 420px) {
         & {
             max-width: 320px;
             padding: 40px 20px 20px 20px;
@@ -161,7 +161,6 @@
 
     &__subtitle {
         max-width: 403px;
-        /*min-height: 128px;*/
         margin: 0 0 50px 0;
         font-size: 64px;
         font-style: normal;

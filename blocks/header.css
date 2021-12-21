@@ -9,11 +9,6 @@
   align-items: center;
   position: relative;
 }
-@media screen and (max-width: 690px) {
-  .header {
-    max-width: 320px;
-  }
-}
 .header__navigation {
   display: flex;
   justify-content: space-between;
@@ -55,12 +50,14 @@
 @media screen and (max-width: 768px) {
   .header__burg-menu {
     display: block;
+    position: absolute;
+    top: 30px;
+    right: 0px;
   }
 }
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 320px) {
   .header__burg-menu {
-    position: absolute;
-    top: 29px;
-    left: 266px;
+    top: 30px;
+    right: -15px;
   }
 }/*# sourceMappingURL=header.css.map */

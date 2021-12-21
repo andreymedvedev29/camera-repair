@@ -8,12 +8,6 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-
-    @media screen and (max-width: 690px) {
-        & {
-            max-width: 320px; 
-        }
-    }
     
     &__navigation {
         display: flex;
@@ -61,15 +55,17 @@
 
         @media screen and (max-width: 768px) {
             & {
-               display: block;    
+               display: block; 
+               position: absolute;
+               top: 30px;
+               right: 0px;
             }
         }
 
-        @media screen and (max-width: 690px) {
+        @media screen and (max-width: 320px) {
             & {
-                position: absolute;
-                top: 29px;
-                left: 266px;;
+                top: 30px;
+                right: -15px;
             }
         }
     }  

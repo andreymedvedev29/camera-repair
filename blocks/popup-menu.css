@@ -21,7 +21,7 @@
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 420px) {
   .popup-menu__container {
     max-width: 320px;
     min-height: 198px;
@@ -36,7 +36,7 @@
   .popup-menu__navigation {
     flex-direction: column;
     position: absolute;
-    top: 75px;
+    top: 78px;
     left: 100px;
   }
 }
